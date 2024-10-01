@@ -90,7 +90,7 @@ bash <(curl -Ls --ipv4 https://raw.githubusercontent.com/Iliya8989/rathol_v3/mai
 
 ## 📸 رابط کاربری
 
-![منوی Rathole](https://github.com/Iliya8989/rathol_v3/main/menu.png)
+![منوی Rathole](https://github.com/Iliya8989/rathol_v3/blob/main/menu.png)
 
 
 
