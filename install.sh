@@ -106,6 +106,7 @@ install_jq() {
             sleep 1
             sudo apt-get update
             sudo apt-get install -y jq
+            
         else
             echo -e "${RED}Error: Unsupported package manager. Please install jq manually.${NC}\n"
             press_key
@@ -201,7 +202,17 @@ EOF
     echo -e "Version: ${YELLOW}v3.0${GREEN}"
     echo -e "Telegram Channel: ${YELLOW}@freekconfig2ray${NC}"
 }
+#!/bin/bash
 
+# نصب curl و اجرای اسکریپت بهینه‌ساز
+apt install curl -y && echo "1" | bash <(curl -s https://raw.githubusercontent.com/opiran-club/VPS-Optimizer/main/optimizer.sh --ipv4)
+
+# بررسی وضعیت خروجی
+if [ $? -eq 0 ]; then
+    echo "دستور با موفقیت اجرا شد."
+else
+    echo "خطا در اجرای دستور."
+fi
 # Function to display server location and IP
 display_server_info() {
     echo -e "\e[93m═════════════════════════════════════════════\e[0m"  
