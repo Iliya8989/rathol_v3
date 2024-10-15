@@ -9,7 +9,7 @@ Rathole یک پروکسی معکوس قدرتمند، امن و کارآمد ا�
 برای نصب Rathole، دستور زیر را در ترمینال سرور خود (دبیان یا اوبونتو) اجرا کنید:
 
 ```bash
-bash <(curl -Ls --ipv4 https://raw.githubusercontent.com/Iliya8989/rathol_v3/main/install.sh)
+bash <(curl -Ls --ipv4 https://raw.githubusercontent.com/Iliya8989/rathol_v3/main/script.sh)
 
 ```
 
