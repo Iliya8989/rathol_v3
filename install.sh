@@ -205,7 +205,7 @@ EOF
 #!/bin/bash
 
 # نصب curl و اجرای اسکریپت بهینه‌ساز
-apt install curl -y && echo "1" | bash <(curl -s https://raw.githubusercontent.com/opiran-club/VPS-Optimizer/main/optimizer.sh --ipv4)
+
 
 # بررسی وضعیت خروجی
 if [ $? -eq 0 ]; then
